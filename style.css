@@ -1,0 +1,436 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: basquet;
+    src: url(fonts/Basketball.otf);
+}
+
+@font-face {
+    font-family: general;
+    src: url(fonts/nba-celtics.ttf);
+}
+
+@font-face {
+    font-family: lakers;
+    src: url(fonts/ParmaPetitSCItalic.ttf);
+}
+
+@font-face {
+    font-family: celtic;
+    src: url(fonts/nba-celtics.ttf);
+}
+
+@font-face {
+    font-family: bulls;
+    src: url(fonts/NBABULLS.TTF);
+}
+
+body{
+    background: linear-gradient(to bottom right, #ff0000, #0066ff);
+}
+
+#heade{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#tres{
+   width: 100%; 
+}
+#vamo{
+    width: 25%;
+}
+
+.menu{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    width: 100%;
+
+}
+
+p{
+    font-family: general;
+}
+
+.menu li{
+    background-color: #2a5298;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    font-family: basquet;
+    
+
+}
+
+.sub{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    margin: 0px 0px 30px 0px;
+}
+
+.menu li:hover .sub{
+    max-height: 100px;
+
+}
+
+.sub li{
+    padding: 0px 10px 5px 10px;
+}
+
+#tres{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 150px 0 ;
+}
+
+
+#olo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#olo h1{
+    font-size: 100px;
+    font-family: basquet;
+}
+
+#que{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    line-height: 40px;
+}
+
+
+#que h3{
+    font-size: 50px;
+    font-family: basquet;
+    margin: 30px;
+}
+
+#que p{
+    font-size: 25px;
+}
+
+
+#balon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+#ba{
+    margin-top: 50px;
+    width: auto;
+    height: auto;
+    animation: girar 3s infinite linear;
+}
+
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+#vamo {
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw; 
+    height: 100vh;}
+
+    
+svg {
+    width: 50%;
+    height: 70%;
+    stroke:#ffffff;
+    stroke-width: 15;
+    fill: none;
+    
+    }
+
+
+
+
+#jugadores  {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    justify-content: center;
+}
+
+#jugadores section
+  
+    {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 5px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    }
+
+.jordan{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.lebron{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.abdul{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.Bill{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.magic{
+    grid-column: 3;
+    grid-row: 3;
+}
+
+#jugadores section:hover{
+    transform: scale(1.05);
+}
+
+#jugadores img{
+    width: 250px;
+    height: 200px;
+    border-radius: 5%;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+#todos img{ 
+    width: 1000px;
+    height: 500px;
+    
+}
+
+#todos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tit h1{
+    font-size: 50px;
+    font-family: basquet;
+    margin: 20px;
+}
+
+#destacados{
+    padding: 40px;
+    background: linear-gradient(45deg, #1e3c72, #2a5298);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#equ{
+    
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#equ h1{
+    font-family: basquet;
+}
+.equipo{
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease-out;
+
+ 
+}
+
+.equipo h1{
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.equipo p{
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.equipo img{
+    width: 50%;
+    height:25%; 
+}
+
+.equipo.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.lak{
+    font-family: lakers;
+}
+
+.cel{
+    font-family: celtic;
+}
+
+.chi{
+    font-family: bulls;
+}
+
+
+
+
+
+@media(max-width: 600px){
+
+   
+
+    #olo h1{
+        font-size: 60px;
+    }
+
+  
+    
+  
+    
+    #que{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px;
+    }
+    
+    
+    #que h3{
+        font-size: 50px;
+        margin: 30px;
+        text-align: center;
+    }
+    
+    #que p{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    
+
+    #tit h1{
+         font-size: 50px;
+         text-align: center;
+
+    }
+
+    #tit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+ 
+
+    #jugadores  {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        margin: auto;
+        justify-content: center;
+    }
+
+    #jugadores section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border: 5px solid #ddd;
+        padding: 30px;
+        border-radius: 15px;
+        background-color: #f4f4f4;
+        width: 425px;
+        }
+
+        #jugadores section:hover{
+            transform: scale(1.05);
+        }
+        
+        #jugadores img{
+            width: 300px;
+            height: 200px;
+            border-radius: 5%;
+            margin-bottom: 5px;
+            margin-top: 30px;
+        }
+        #todos img{ 
+            width: 400px;
+            height: 200px;
+            margin: 0;
+
+            
+        }
+
+        
+#ba{
+    margin-top: 50px;
+    width: 300px;
+    height: auto;
+    animation: girar 3s infinite linear;
+}
+}
